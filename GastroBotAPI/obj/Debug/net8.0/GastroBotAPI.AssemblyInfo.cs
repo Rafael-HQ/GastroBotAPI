@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GastroBotAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93ad82d895824c9f1679a7aea435bd6a08cd9f74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8f4e34fc40ab7ffd35e916158dcf5b64dca2f90")]
 [assembly: System.Reflection.AssemblyProductAttribute("GastroBotAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GastroBotAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
