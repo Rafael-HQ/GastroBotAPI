@@ -1,0 +1,7 @@
+﻿services:
+  gastrobotapi:
+    image: gastrobotapi
+    build:
+      context: .
+      dockerfile: GastroBotAPI/Dockerfile
+
