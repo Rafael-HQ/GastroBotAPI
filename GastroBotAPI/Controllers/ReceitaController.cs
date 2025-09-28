@@ -13,19 +13,14 @@ namespace WebApplication1.Controllers
     {
         private readonly HttpClient _http;
         private readonly string _apiKey;
+        private readonly string _endpoint;
 
+        // APENAS UM construtor - remova o outro!
         public ReceitaController(IHttpClientFactory httpClientFactory, IConfiguration configuration)
         {
             _http = httpClientFactory.CreateClient();
             _apiKey = configuration["GeminiApiKey"] 
                       ?? throw new InvalidOperationException("Gemini API Key não configurada");
-            _endpoint = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={_apiKey}";
-        }
-        private readonly string _endpoint;
-
-        public ReceitaController(IHttpClientFactory httpClientFactory)
-        {
-            _http = httpClientFactory.CreateClient();
             _endpoint = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={_apiKey}";
         }
 
@@ -70,3 +65,4 @@ namespace WebApplication1.Controllers
         }
     }
 }
+
