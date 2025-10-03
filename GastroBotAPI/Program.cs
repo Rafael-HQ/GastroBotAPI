@@ -1,4 +1,7 @@
+using GastroBotAPI.Context;
+using GastroBotAPI.Models;
 using GastroBotAPI.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,11 +11,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
+builder.Services.AddDbContext<IdentityContext>(options => options.UseNpgsql(
+    builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddHttpClient<GeminiServices>(client =>
 {
     client.BaseAddress = new Uri("https://generativelanguage.googleapis.com/");
     client.DefaultRequestHeaders.Add("Accept", "application/json");
 });
+
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
+
+builder.Services
+    .AddIdentityApiEndpoints<User>()
+    .AddEntityFrameworkStores<IdentityContext>();
 
 var app = builder.Build();
 
@@ -23,6 +35,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.MapIdentityApi<User>();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();

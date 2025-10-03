@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rafael\\RiderProjects\\GastroBotAPI\\GastroBotAPI\\GastroBotAPI.csproj": {}
+    "C:\\Users\\Rafael\\RiderProjects\\GastroBotAPI\\GastroBotApi\\GastroBotAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rafael\\RiderProjects\\GastroBotAPI\\GastroBotAPI\\GastroBotAPI.csproj": {
+    "C:\\Users\\Rafael\\RiderProjects\\GastroBotAPI\\GastroBotApi\\GastroBotAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafael\\RiderProjects\\GastroBotAPI\\GastroBotAPI\\GastroBotAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Rafael\\RiderProjects\\GastroBotAPI\\GastroBotApi\\GastroBotAPI.csproj",
         "projectName": "GastroBotAPI",
-        "projectPath": "C:\\Users\\Rafael\\RiderProjects\\GastroBotAPI\\GastroBotAPI\\GastroBotAPI.csproj",
+        "projectPath": "C:\\Users\\Rafael\\RiderProjects\\GastroBotAPI\\GastroBotApi\\GastroBotAPI.csproj",
         "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafael\\RiderProjects\\GastroBotAPI\\GastroBotAPI\\obj\\",
+        "outputPath": "C:\\Users\\Rafael\\RiderProjects\\GastroBotAPI\\GastroBotApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,9 +43,27 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.4, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

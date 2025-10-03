@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using GastroBotAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApplication1.Controllers
 {
