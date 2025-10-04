@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
-builder.Services.AddDbContext<IdentityContext>(options => options.UseNpgsql(
+builder.Services.AddDbContext<IdentityContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddHttpClient<GeminiServices>(client =>
 {

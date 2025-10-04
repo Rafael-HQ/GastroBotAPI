@@ -45,8 +45,12 @@ public class GeminiServices
             content);
         
         var responseString = await response.Content.ReadAsStringAsync();
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("\n--- Resposta da Gemini ---\n");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.WriteLine(responseString);
+        Console.ResetColor();
         
         var result = JObject.Parse(responseString);
         string? texto =
